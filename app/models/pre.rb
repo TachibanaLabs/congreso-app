@@ -1,0 +1,2 @@
+class Pre < ApplicationRecord
+end

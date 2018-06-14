@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pres</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pres.each do |pre| %>
+      <tr>
+        <td><%= pre.nombre %></td>
+        <td><%= pre.correo %></td>
+        <td><%= link_to 'Show', pre %></td>
+        <td><%= link_to 'Edit', edit_pre_path(pre) %></td>
+        <td><%= link_to 'Destroy', pre, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pre', new_pre_path %>

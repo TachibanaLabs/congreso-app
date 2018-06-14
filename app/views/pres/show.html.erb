@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @pre.nombre %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @pre.correo %>
+</p>
+
+<%= link_to 'Edit', edit_pre_path(@pre) %> |
+<%= link_to 'Back', pres_path %>
