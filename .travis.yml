@@ -1,1 +1,10 @@
 language: ruby
+script:
+- bundle exec rails db:migrate RAILS_ENV=test
+- bundle exec rails test
+deploy:
+  provider: heroku
+  api_key:
+    secure: ePLzjZxubchrn8c+F5TCTiNyB3L49RrNRz5w1zZApt+S67YOUKzJJuvzvVCResywUfVvoJOPa/7fkXlGKotzYlC24idauFfQI2DoIG5HFDxTkJtPNj7ubyE0wqGW+mo2KG05sLWBnh1knTG3TBo6GWaMbb/gRMLFzZ2rs2P8CI+dXKRiEamayFZ6tDO78j4I9WAcVcBFgrhCwfkhiZjPqBZKddhgtMsSgOX18f8rbZw2EPeLyHi+/D97UJtehr6kuOrlivJ9bBPQ9gr4yxJ/meEfePHk9iIm+UXfyX3N5yBgjHgQLf3AWAAE8iL+MVZIDoZE/v3IwSaeCokkaIbAsCkBH2r/FrjWo6th86MGCI3QfHuccu+24/7dr0SJDJGIWEjtrx4aMASaEBw6kbazYFPR64f34g4udhN95jXcwVz+01tEJS95tdL1jC278uNVtLykffGIYSjcv86VmhJbYx0WDNZuKqJUuvCVGfZ4LPYwnp9wE5UF+r9P3bdayhsCcIInbIO55GH3yH0AjznQGwnC0UuVrAw/RHu45wVp/e0KYsfYS5m5V6oRNDmCvKyGo2cauIDviSMHIEgZ8heycpw5gXBpKrT6EssZUxwfdluQRAX+TFamQq3qkZmBrf6JpRpEncUK6JLWkGUgGAjk1JZcy0QwAwZ3be1KNXFd6ko=
+  app: congreso
+  run: "rake db:migrate"
