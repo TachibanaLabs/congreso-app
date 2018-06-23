@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get '/', to: 'pres#index'
-  resources :pres
+  get '/', to: 'leads#index'
+  resources :leads
 end

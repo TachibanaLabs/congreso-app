@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_14_022553) do
+ActiveRecord::Schema.define(version: 2018_06_23_171651) do
 
-  create_table "pres", force: :cascade do |t|
-    t.string "nombre"
-    t.string "correo"
+  create_table "leads", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
