@@ -34,6 +34,7 @@ gem "jbuilder", "~> 2.5"
 gem "bootsnap", ">= 1.1.0", require: false
 
 gem "coveralls", require: false
+gem "bulma-rails", "~> 0.7.1"
 
 
 group :development, :test do
