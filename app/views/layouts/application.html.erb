@@ -16,6 +16,40 @@
 </head>
 
 <body>
+<nav class="navbar is-transparent">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <%= image_tag "logo.png",  height: '32', width: '32' %>
+    </a>
+    <!-- Este div es la hamburguesa, pls no la toques Roy -->
+    <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <div id="navbarExampleTransparentExample" class="navbar-menu">
+
+    <div class="navbar-end">
+      <a class="navbar-item">
+        Convocatoria
+      </a>
+      <a class="navbar-item">
+        Ponentes
+      </a>
+      <a class="navbar-item">
+        Preregistro
+      </a>
+      <a class="navbar-item">
+        Patrocinadores
+      </a>
+      <a class="navbar-item">
+        Contacto
+      </a>
+    </div>
+  </div>
+</nav>
 <%= yield %>
 </body>
 </html>
