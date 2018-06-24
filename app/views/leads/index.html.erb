@@ -20,6 +20,16 @@
       <section class="section">
         <div class="container">
           <h1 class="title">
+            Buenos Dias!
+          </h1>
+          <figure class="image">
+            <%= image_tag "ftc.png" %>
+          </figure>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h1 class="title">
             1er Congreso: Futuro-Transdisciplina y Ciencia
           </h1>
           <h2 class="subtitle">
@@ -181,7 +191,7 @@
           <h1 class="title">Contacto</h1>
             <div class="columns">
               <div class="column">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15048.066631462598!2d-99.1658042!3d19.4548486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc518869be8ec0f3!2sCentro+Interdisciplinario+de+Ciencias+de+la+Salud%2C+Unidad+Santo+Tom%C3%A1s+IPN!5e0!3m2!1ses-419!2smx!4v1527467450680" frameborder="0" scrolling="no" onload="resizeIframe(this)" ></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15048.066631462598!2d-99.1658042!3d19.4548486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfc518869be8ec0f3!2sCentro+Interdisciplinario+de+Ciencias+de+la+Salud%2C+Unidad+Santo+Tom%C3%A1s+IPN!5e0!3m2!1ses-419!2smx!4v1527467450680" frameborder="0" scrolling="no"></iframe>
               </div>
               <div class="column">
                 <div class="content">
@@ -196,3 +206,38 @@
     </div>
   </div>
 </section>
+<script>
+    const getRemainingTime = deadline => {
+        let now = new Date(),
+            remainTime = (new Date(deadline) - now + 1000) / 1000,
+            remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+            remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+            remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+            remainDays = Math.floor(remainTime / (3600 * 24));
+
+        return {
+            remainSeconds,
+            remainMinutes,
+            remainHours,
+            remainDays,
+            remainTime
+        }
+    };
+
+    const countdown = (deadline, elem, finalMessage) => {
+        const el = document.getElementById(elem);
+
+        const timerUpdate = setInterval(() => {
+            let t = getRemainingTime(deadline);
+            el.innerHTML = `${t.remainDays} Dias ${t.remainHours} Horas ${t.remainMinutes} Minutos ${t.remainSeconds} Segundos`;
+
+            if (t.remainTime <= 1) {
+                clearInterval(timerUpdate);
+                el.innerHTML = finalMessage;
+            }
+
+        }, 1000)
+    };
+
+    countdown('Nov 14 2018 00:00:00 GMT-0500', 'clock', '¡Comenzamos!');
+</script>
