@@ -78,6 +78,6 @@ class RegistrarsTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Registrar was successfully destroyed"
+    assert_text 'Registrar was successfully destroyed'
   end
 end
