@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Registrars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Titulo</th>
+      <th>Carrera</th>
+      <th>Institucion</th>
+      <th>Direccion</th>
+      <th>Ciudad</th>
+      <th>Postal</th>
+      <th>Pais</th>
+      <th>Telefono</th>
+      <th>Correo</th>
+      <th>Cartel</th>
+      <th>Delser</th>
+      <th>Adultez</th>
+      <th>Construccion</th>
+      <th>Quien</th>
+      <th>Como</th>
+      <th>Newmun</th>
+      <th>Desigualdad</th>
+      <th>Vende</th>
+      <th>Sustenta</th>
+      <th>Futuro</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @registrars.each do |registrar| %>
+      <tr>
+        <td><%= registrar.fullname %></td>
+        <td><%= registrar.titulo %></td>
+        <td><%= registrar.carrera %></td>
+        <td><%= registrar.institucion %></td>
+        <td><%= registrar.direccion %></td>
+        <td><%= registrar.ciudad %></td>
+        <td><%= registrar.postal %></td>
+        <td><%= registrar.pais %></td>
+        <td><%= registrar.telefono %></td>
+        <td><%= registrar.correo %></td>
+        <td><%= registrar.cartel %></td>
+        <td><%= registrar.delser %></td>
+        <td><%= registrar.adultez %></td>
+        <td><%= registrar.construccion %></td>
+        <td><%= registrar.quien %></td>
+        <td><%= registrar.como %></td>
+        <td><%= registrar.newmun %></td>
+        <td><%= registrar.desigualdad %></td>
+        <td><%= registrar.vende %></td>
+        <td><%= registrar.sustenta %></td>
+        <td><%= registrar.futuro %></td>
+        <td><%= link_to 'Show', registrar %></td>
+        <td><%= link_to 'Edit', edit_registrar_path(registrar) %></td>
+        <td><%= link_to 'Destroy', registrar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registrar', new_registrar_path %>
