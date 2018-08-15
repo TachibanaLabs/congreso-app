@@ -34,6 +34,10 @@ ActiveRecord::Schema.define(version: 2018_08_11_075615) do
     t.string "vende"
     t.string "sustenta"
     t.string "futuro"
+
+  create_table "leads", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

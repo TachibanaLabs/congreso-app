@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+// 1. Import the initial variables
+@import "sass/utilities/initial-variables";
+@import "sass/utilities/functions";
+
+// 6. Import the rest of Bulma
+@import "bulma";
