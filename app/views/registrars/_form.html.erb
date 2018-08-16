@@ -1,0 +1,122 @@
+<%= form_with(model: registrar, local: true) do |form| %>
+  <% if registrar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(registrar.errors.count, "error") %> prohibited this registrar from being saved:</h2>
+
+      <ul>
+      <% registrar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :fullname %>
+    <%= form.text_field :fullname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carrera %>
+    <%= form.text_field :carrera %>
+  </div>
+
+  <div class="field">
+    <%= form.label :institucion %>
+    <%= form.text_field :institucion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ciudad %>
+    <%= form.text_field :ciudad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postal %>
+    <%= form.number_field :postal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pais %>
+    <%= form.text_field :pais %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.number_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cartel %>
+    <%= form.text_field :cartel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delser %>
+    <%= form.text_field :delser %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adultez %>
+    <%= form.text_field :adultez %>
+  </div>
+
+  <div class="field">
+    <%= form.label :construccion %>
+    <%= form.text_field :construccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quien %>
+    <%= form.text_field :quien %>
+  </div>
+
+  <div class="field">
+    <%= form.label :como %>
+    <%= form.text_field :como %>
+  </div>
+
+  <div class="field">
+    <%= form.label :newmun %>
+    <%= form.text_field :newmun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desigualdad %>
+    <%= form.text_field :desigualdad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vende %>
+    <%= form.text_field :vende %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sustenta %>
+    <%= form.text_field :sustenta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :futuro %>
+    <%= form.text_field :futuro %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

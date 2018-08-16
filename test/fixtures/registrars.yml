@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fullname: MyString
+  titulo: MyString
+  carrera: MyString
+  institucion: MyString
+  direccion: MyString
+  ciudad: MyString
+  postal: 1
+  pais: MyString
+  telefono: 1
+  correo: MyString
+  cartel: MyString
+  delser: MyString
+  adultez: MyString
+  construccion: MyString
+  quien: MyString
+  como: MyString
+  newmun: MyString
+  desigualdad: MyString
+  vende: MyString
+  sustenta: MyString
+  futuro: MyString
+
+two:
+  fullname: MyString
+  titulo: MyString
+  carrera: MyString
+  institucion: MyString
+  direccion: MyString
+  ciudad: MyString
+  postal: 1
+  pais: MyString
+  telefono: 1
+  correo: MyString
+  cartel: MyString
+  delser: MyString
+  adultez: MyString
+  construccion: MyString
+  quien: MyString
+  como: MyString
+  newmun: MyString
+  desigualdad: MyString
+  vende: MyString
+  sustenta: MyString
+  futuro: MyString
