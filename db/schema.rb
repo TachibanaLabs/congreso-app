@@ -12,12 +12,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_180_829_234_337) do
+ActiveRecord::Schema.define(version: 20_180_904_010_645) do
   create_table 'leads', force: :cascade do |t|
     t.string 'name', null: false
     t.string 'email', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
+    t.string 'title', limit: 60, default: '', null: false
+    t.string 'career', limit: 60, default: '', null: false
+    t.string 'institution', limit: 60, default: '', null: false
+    t.string 'address', limit: 60, default: '', null: false
+    t.string 'city', limit: 60, default: '', null: false
+    t.string 'postal_code', limit: 60, default: '', null: false
+    t.string 'country', limit: 60, default: '', null: false
+    t.string 'phone_number', limit: 60, default: '', null: false
+    t.boolean 'student', default: false
+    t.integer 'paper'
+    t.integer 'symposium'
+    t.integer 'table_discussion'
   end
 
   create_table 'users', force: :cascade do |t|
