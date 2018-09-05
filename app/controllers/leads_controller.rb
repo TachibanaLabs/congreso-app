@@ -4,7 +4,7 @@ class LeadsController < ApplicationController
   def index; end
 
   def create
-    @lead = Lead.new(params[:lead].permit(:name, :email))
+    @lead = Lead.new(params[:lead].permit!)
     if @lead.save
       render action: 'index', saved: true
     else
